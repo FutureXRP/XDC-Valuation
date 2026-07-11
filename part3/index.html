@@ -14,9 +14,10 @@
   <meta property="og:description" content="Autopsies of we.trade, Marco Polo Network, and Contour — and an honest accounting of which failure causes are cured by MLETR, public-chain neutrality, and TFDi, and which are not.">
   <meta property="og:url" content="https://xdcvaluation.info/part3/">
   <meta property="og:image" content="https://xdcvaluation.info/assets/og-image.png">
+  <meta property="article:published_time" content="2026-07-11">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Part III — The consortium graveyard.">
-  <meta name="twitter:description" content="Autopsies of we.trade, Marco Polo Network, and Contour — and an honest accounting of which failure causes are cured by MLETR, public-chain neutrality, and TFDi, and which are not.">
+  <meta name="twitter:description" content="Autopsies of we.trade, Marco Polo, and Contour — and which failure causes the new legal substrate actually cures.">
   <meta name="twitter:image" content="https://xdcvaluation.info/assets/og-image.png">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -47,9 +48,8 @@
       <header class="article-header">
         <div class="stamp-row">
           <span class="stamp stamp-manila">Part III</span>
-          <span class="stamp stamp-seal">Forthcoming</span>
         </div>
-        <p class="kicker">Concession at Full Strength</p>
+        <p class="kicker">Concession at Full Strength · Published 11 July 2026</p>
         <h1>The consortium <em>graveyard</em>.</h1>
         <p class="dek">Blockchain trade finance backed by the world's largest banks failed three times in two years. The bear case has tombstones.</p>
         <div class="panel panel-conditional">
@@ -59,23 +59,74 @@
       </header>
 
       <div class="article-body">
-        <p class="forthcoming-note">This part has not yet been published. The series contents are visible from day one by design; each part is written in dedicated sessions and published here when it meets the framework's sourcing standard.</p>
+        <p>Every thesis on this site must survive contact with the following facts. Between mid-2022 and late 2023, the three most credible blockchain trade finance ventures on earth shut down. They were not underfunded startups run by outsiders. They were consortium platforms built, owned, and used by the largest banks in the world, running on enterprise blockchain stacks from IBM and R3, with real customers and real transactions. All three are dead. Anyone offering a blockchain trade finance thesis owes these corpses an autopsy before offering a differentiation argument — and the autopsy has to be performed at full strength, not on a strawman.</p>
 
-        <h2>What this part will cover</h2>
-        <ul>
-          <li>we.trade (dissolved 2022), Marco Polo Network (insolvent 2023), Contour (wound down 2023) — an autopsy of each.</li>
-          <li>The failure causes: governance, incentive misalignment, permissioned-network liquidity islands, and — critically — the absence of legal recognition for electronic transferable records during their lifetimes.</li>
-          <li>The differentiation argument, only as far as it honestly goes: MLETR and the ETDA change the legal substrate; public-chain neutrality changes the incentive structure; TFDi participation changes distribution.</li>
-          <li>A plain statement of which failure causes are cured by these changes — and which are not.</li>
-        </ul>
+        <h2>we.trade — dissolved 2022</h2>
 
-        <section class="sources" aria-label="Primary sources">
-          <h2>Primary sources</h2>
+        <p>we.trade was founded in 2017 and owned by a syndicate that eventually numbered around a dozen European banks — HSBC, Deutsche Bank, Santander, UniCredit, and Société Générale among them — with IBM joining as both technology partner and shareholder. Built on Hyperledger Fabric, it targeted open-account trade for European SMEs: a shared platform where buyer, seller, and both banks could see the same transaction state, with bank payment undertakings enforced by smart contracts. It announced discontinuation in mid-2022 after failing to raise further funding from its own shareholder banks.</p>
+
+        <p>The autopsy: corporate uptake never materialized at scale, and the ownership structure made that fatal in a specific way. The banks were simultaneously we.trade's owners, its distribution channel, and its customers — so when adoption lagged, each bank faced the same decision from three directions, and every incentive pointed toward not writing the next funding check. A platform whose network effect depends on its owners' enthusiasm is leveraged to the least enthusiastic owner. There was also a product truth underneath: the value proposition — visibility and payment assurance on open-account trade — was a convenience, not a necessity, and conveniences do not conscript busy corporate treasurers.</p>
+
+        <h2>Marco Polo Network — insolvent 2023</h2>
+
+        <p>Marco Polo was the most ambitious of the three: a receivables and payment-commitment network built on R3's Corda with more than thirty participating banks, including Commerzbank, BNY Mellon, and Bank of America as users of its flagship program. TradeIX, the Irish company operating it, entered insolvency in February 2023 with debts of €5.2 million after a decisive investment — reported to be from Bank of America — fell through. The Irish High Court was told the company's liabilities exceeded its assets by €2.5 million; it had burned through years of consortium funding while revenue never approached operating costs.</p>
+
+        <p>The autopsy: the enterprise sales cycle ate the runway. Banks pilot for years before committing production volume; a venture-funded operating company cannot survive on pilots, and a consortium is structurally slow at converting pilots into paid deployments because every governance decision routes through committees of competitors. Note the grim detail that generalizes: the network had blue-chip participants, functioning technology, and a genuinely useful product — supply chain finance automation — and none of that generated cash fast enough to matter. Technology adoption and enterprise procurement run on different clocks, and the procurement clock won.</p>
+
+        <h2>Contour — wound down 2023</h2>
+
+        <p>Contour is the corpse that should trouble the bulls most, because Contour did almost everything right. Spun out of R3's Voltron project and backed by HSBC, Standard Chartered, Citi, BNP Paribas, and other giants of documentary trade, it digitized the letter of credit — the most paper-intensive, highest-cost instrument in the business. It reported cutting document processing times from days to hours. It had live corporate users and a real network of member banks. It announced its wind-down in late 2023, reportedly processing only sixty to seventy transactions per month at the end — volume that could not sustain the operating company behind it.</p>
+
+        <p>The autopsy: even a working product, solving a real problem, for committed blue-chip customers, could not cross from pilot volume to production volume before patience expired. Sixty transactions a month against a global LC market processing millions is not a beachhead; it is a demo that outlived its budget. And part of the reason the volume never came is the subject of Part I of this series: for Contour's entire operating life, an electronic bill of lading was not legally a bill of lading in the jurisdictions that govern world trade. Every Contour transaction that touched a negotiable document still needed a paper original or a contractual workaround. The product digitized the workflow around a legal object that remained stubbornly physical.</p>
+
+        <h2>The pattern, named</h2>
+
+        <p>Three deaths, four shared causes, each of which must be checked against the current thesis rather than waved at:</p>
+
+        <p><strong>1. No legal substrate.</strong> All three networks lived and died before the Electronic Trade Documents Act came into force in September 2023, and before MLETR adoption reached any jurisdiction that governs meaningful trade volume. The core legal object of documentary trade could not exist electronically during their lifetimes. This is the single largest difference between then and now, and it is honest to say so loudly: the graveyard's occupants were selling digitization the law did not yet recognize.</p>
+
+        <p><strong>2. Permissioned liquidity islands.</strong> Each network's reach ended at its membership list. A bank on Contour could not transact with a bank on Marco Polo; a corporate had to join each club its counterparties used. Network effects capped at membership are network effects that never compound. Permissioned architecture was chosen precisely to reassure banks — and it guaranteed the fragmentation that starved them.</p>
+
+        <p><strong>3. Incentive misalignment.</strong> Consortium ownership meant every strategic decision was negotiated among competitors, each of which wanted cost savings for itself and none of which wanted a rival's platform to win. Banks that would not join a competitor-owned network defaulted to joining nothing. The platforms needed volume; the owners needed control; those needs conflicted, and control won.</p>
+
+        <p><strong>4. The clock.</strong> Operating companies with salaries and cloud bills were funded like startups but sold like enterprise infrastructure. The revenue curve of enterprise trade finance adoption is measured in bank procurement cycles — five to ten years. None of the three had a funding structure that survived that arithmetic.</p>
+
+        <h2>The differentiation argument, taken only as far as it honestly goes</h2>
+
+        <p>Now check the current stack — MLETR-grade documents on public chains, TradeTrust, XDC — against each cause, without generosity.</p>
+
+        <p><strong>Cause 1 is genuinely cured.</strong> The ETDA is in force; the MLETR curve is compounding; an electronic bill of lading under English law is now a bill of lading. This is a categorical change in the environment, not an incremental one, and it removes the specific constraint that hollowed out Contour's product. It is the strongest single card in the bull hand.</p>
+
+        <p><strong>Cause 2 is cured in architecture, unproven in practice.</strong> A public chain has no membership list; a TradeTrust document verifies against a public ledger regardless of which platform issued it, and it survives any single vendor's death — the exact failure mode that erased value when the consortium platforms folded. But architectural openness only becomes a network effect when volume actually arrives. An open network with sixty transactions a month is exactly as dead as a closed one.</p>
+
+        <p><strong>Cause 3 is partially cured.</strong> Neutral public infrastructure removes the "won't join a rival's platform" objection — no bank owns XDC Network or TradeTrust, and Singapore's IMDA is a credibly disinterested steward of the standard. What neutrality does not do is create a champion: consortium platforms failed partly because their owners wouldn't push them, but at least they had owners with theoretical distribution. A neutral network must be adopted by institutions that no one is contractually obligated to bring to the table. TFDi membership and bank pilots are channels, not commitments.</p>
+
+        <p><strong>Cause 4 is not cured, and it applies with full force.</strong> Enterprise adoption clocks did not speed up because the architecture changed. Banks will pilot public-chain trade documents for years, exactly as they piloted Corda. The entities selling into that cycle — the platform vendors, the tokenization startups, XDC's own ecosystem companies — face the same runway arithmetic that killed TradeIX. A public chain itself cannot go bankrupt the way an operating company can, which matters; but a chain's ecosystem can wither into ghost-chain status by the same clock that emptied Contour's pipeline, and token holders would experience that withering as the thesis failing, whatever the validators keep validating.</p>
+
+        <blockquote>Score it honestly: one cause cured outright, two improved but unproven, one untouched. That is a materially better hand than the consortia held. It is nowhere near a guarantee — and the cause that remains untouched, the clock, is the one that actually killed all three.</blockquote>
+
+        <p>The graveyard also supplies the correct base rate for Part V. Institutional blockchain trade finance ventures backed by the strongest possible sponsors have so far failed at a rate of three for three. The current cycle operates under a categorically better legal regime and a categorically more open architecture — grounds to expect a better rate, not grounds to expect zero. Any probability table that does not start from this base rate is decoration. Before pricing failure, though, the framework owes the bull case its full quantitative hearing: if the machine works, how big is it? That is Part IV.</p>
+
+        <div class="falsification">
+          <span class="stamp stamp-seal">Falsification conditions — Part III</span>
+          <ol>
+            <li>XDC-based trade document or trade finance volume remains in Contour's terminal range — tens of transactions per month, sustained — by end-2027. The differentiation argument would have failed its own test on its own timeline.</li>
+            <li>A major bank consortium launches a successor permissioned platform that wins the volume public chains were supposed to win. The neutrality argument would be shown to have misread what banks actually want.</li>
+            <li>TradeTrust or an equivalent framework is deployed at production scale by major institutions with the public-chain layer swapped out for private infrastructure. The open-architecture premise would be cured of its relevance.</li>
+          </ol>
+          <p class="falsification-note">The graveyard defines the bar the current thesis must clear, on a clock it does not control.</p>
+        </div>
+
+        <section class="sources" aria-label="Records and sources">
+          <h2>Records and sources</h2>
           <ul>
-            <li>Primary records of the we.trade dissolution (2022)</li>
-            <li>Primary records of the Marco Polo Network insolvency (2023)</li>
-            <li>Primary records of the Contour wind-down (2023)</li>
-            <li>ICC Digital Standards Initiative — publications</li>
+            <li><a href="https://www.gtreview.com/news/fintech/we-trade-calls-it-quits-heres-what-went-wrong/" rel="noopener">Global Trade Review — we.trade discontinuation coverage (2022)</a></li>
+            <li><a href="https://www.gtreview.com/news/top-stories/marco-polo-brings-in-liquidators-as-funds-run-dry/" rel="noopener">Global Trade Review — Marco Polo insolvency, Irish High Court proceedings (2023)</a></li>
+            <li><a href="https://www.ledgerinsights.com/marco-polo-blockchain-trade-finance-insolvency/" rel="noopener">Ledger Insights — Marco Polo Network insolvency record (€5.2M debts)</a></li>
+            <li><a href="https://www.ledgerinsights.com/contour-blockchain-trade-finance-network-shutter/" rel="noopener">Ledger Insights — Contour wind-down record (transaction volumes)</a></li>
+            <li><a href="https://www.spglobal.com/market-intelligence/en/news-insights/articles/2022/10/trade-finance-industry-remains-hopeful-on-blockchain-despite-failed-projects-72557910" rel="noopener">S&amp;P Global — industry post-mortem on failed blockchain trade finance projects</a></li>
+            <li><a href="https://www.legislation.gov.uk/ukpga/2023/38" rel="noopener">UK Electronic Trade Documents Act 2023 — in force after all three wind-downs began</a></li>
+            <li><a href="https://www.tradefinancedistribution.com/" rel="noopener">Trade Finance Distribution Initiative — distribution channel referenced in the differentiation argument</a></li>
           </ul>
         </section>
       </div>

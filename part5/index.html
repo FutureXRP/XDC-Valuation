@@ -11,12 +11,13 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="XDC Valuation Framework">
   <meta property="og:title" content="Part V — The case against, taken seriously.">
-  <meta property="og:description" content="Accrual decoupling, TradeTrust migration, stablecoin capture, supply overhang, and enterprise-adoption stall — with probability table, expected value, Kelly sizing, and falsification criteria.">
+  <meta property="og:description" content="Five failure modes at full strength, with probability table, expected value, Kelly sizing, and explicit falsification criteria.">
   <meta property="og:url" content="https://xdcvaluation.info/part5/">
   <meta property="og:image" content="https://xdcvaluation.info/assets/og-image.png">
+  <meta property="article:published_time" content="2026-07-11">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Part V — The case against, taken seriously.">
-  <meta name="twitter:description" content="Accrual decoupling, TradeTrust migration, stablecoin capture, supply overhang, and enterprise-adoption stall — with probability table, expected value, Kelly sizing, and falsification criteria.">
+  <meta name="twitter:description" content="Five failure modes at full strength, priced. The bull case is earned only by taking the bear case on its own terms.">
   <meta name="twitter:image" content="https://xdcvaluation.info/assets/og-image.png">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -47,9 +48,8 @@
       <header class="article-header">
         <div class="stamp-row">
           <span class="stamp stamp-manila">Part V</span>
-          <span class="stamp stamp-seal">Forthcoming</span>
         </div>
-        <p class="kicker">Series Close</p>
+        <p class="kicker">Series Close · Published 11 July 2026</p>
         <h1>The case against, <em>taken seriously</em>.</h1>
         <p class="dek">Five failure modes at full strength, priced. The bull case is earned only by taking the bear case on its own terms.</p>
         <div class="panel panel-conditional">
@@ -59,25 +59,88 @@
       </header>
 
       <div class="article-body">
-        <p class="forthcoming-note">This part has not yet been published. The series contents are visible from day one by design; each part is written in dedicated sessions and published here when it meets the framework's sourcing standard.</p>
+        <p>A valuation framework that cannot say what failure looks like is a sales document. This series closes the way its sibling closed: by giving the bear case the floor, at full strength, and then doing the only intellectually honest thing available afterward — assigning probabilities and letting the arithmetic speak. Five failure modes follow. None is a strawman; each is the strongest version this framework can construct, and two of them are, on present evidence, more likely than not to bite.</p>
 
-        <h2>What this part will cover</h2>
-        <ul>
-          <li>Failure mode 1 — accrual decoupling: TVL grows, token demand doesn't. The ghost-chain outcome.</li>
-          <li>Failure mode 2 — TradeTrust multichain migration to a larger ecosystem.</li>
-          <li>Failure mode 3 — USDC and stablecoin capture of the full settlement layer.</li>
-          <li>Failure mode 4 — supply overhang absorption.</li>
-          <li>Failure mode 5 — a consortium-graveyard repeat via enterprise-adoption stall.</li>
-          <li>Probability table, expected value, Kelly sizing, and the explicit falsification criteria that would retire this framework.</li>
-        </ul>
+        <h2>Failure mode one: accrual decoupling — the ghost chain</h2>
+
+        <p>The default outcome, and the bear case's queen. Trade digitization succeeds; XDC even hosts a respectable share of it; and the token does not matter. Documents are tokenized — their value accrues to the businesses trading them. Settlement runs in USDC — its economics accrue to Circle. Gas is negligible by design. Masternode collateral sits at its fixed floor. The chain hums with genuinely useful activity while the token's function-driven demand stays where Part IV's Stall row puts it: under a cent of support. Nothing about this outcome is exotic — it is what happens automatically if the protocol-collateral layer never ignites, and Part II showed that layer is currently the thinnest of the three channels. The ghost chain is not a tail risk. It is the path of least resistance.</p>
+
+        <h2>Failure mode two: TradeTrust migrates</h2>
+
+        <p>TradeTrust supports five chains and is stewarded by a government agency with no stake in XDC's success. Ethereum's ecosystem is orders of magnitude larger by developers, liquidity, and institutional integrations; its L2s offer enterprise-grade throughput at negligible fees. The strongest version of this failure mode is not hostile — it is gravitational. Banks and carriers standardizing on electronic documents will ask their vendors which chain to verify against, and vendors will default to the largest ecosystem unless XDC gives a decisive reason not to. XDC's trade-finance head start is real; head starts against gravity have a poor record. If production eBL volume consolidates on an Ethereum L2, this framework's S parameter goes to a rounding error, and no amount of MLETR progress rescues it.</p>
+
+        <h2>Failure mode three: stablecoin capture of the settlement layer</h2>
+
+        <p>Native USDC on XDC was a milestone and a Trojan horse in the same shipment. The strongest version: regulated dollar stablecoins, riding post-GENIUS-Act legitimacy, become the exclusive settlement and collateral medium of on-chain trade finance — not only paying invoices in USDC but posting margin, funding pools, and denominating first-loss capital in it. In that world, ε is structurally pinned near zero, because every function XDC might have performed as collateral is performed by an instrument treasurers already understand, auditors already accept, and regulators already bless. Part II called XDC's remaining role "functions USDC cannot perform." The bear case answer is that in trade finance, once documents are legally digital, there may be no commercially significant function USDC cannot perform except block validation itself.</p>
+
+        <h2>Failure mode four: the overhang wins</h2>
+
+        <p>Seventeen billion XDC — approaching 45 percent of total supply — sit outside circulation in ecosystem, founder, and treasury allocations. The strongest version of this failure mode needs no villainy: ecosystem funds get spent on ecosystem building, which is their purpose; grants and incentives steadily convert treasury XDC into sell-side flow; and every increment of genuine demand the thesis generates is met by supply that was waiting for it. Token demand doubles, circulating supply grows forty percent, and the holder's arithmetic barely moves. This failure mode compounds every other: it converts even partial thesis success into flat price action, and in a market where impact runs on square-root law, distribution pressure is amplified on the way down exactly as accumulation is on the way up.</p>
+
+        <h2>Failure mode five: the graveyard repeats</h2>
+
+        <p>Part III scored the differentiation argument honestly: one consortium-era failure cause cured, two improved, one — the enterprise adoption clock — untouched. The strongest version of this failure mode is simply Contour's arithmetic transplanted: pilots everywhere, production nowhere, sixty transactions a month dressed in new architecture. Banks pilot public-chain trade documents for five years; the tokenization startups selling into the cycle run out of runway exactly as TradeIX did; carriers meet their DCSA eBL commitments on proprietary carrier platforms that touch no public chain at all. The legal unlock proves necessary but nowhere near sufficient, and the whole public-chain trade finance category — not just XDC — spends a decade as a promising demo. The base rate for institutional blockchain trade finance ventures is currently three failures in three attempts. Respect it.</p>
+
+        <h2>The probability table</h2>
+
+        <p>These are subjective probabilities, dated July 2026, published to be marked against reality in the Living Framework — not to be mistaken for measurements. The five failure modes are not independent (modes two and three both express themselves through mode one), so rather than multiplying them, the framework assigns probabilities to terminal outcomes, mapped to Part IV's scenario rows:</p>
+
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Terminal outcome (by ~2030)</th>
+              <th scope="col">Maps to</th>
+              <th scope="col">P (subjective)</th>
+              <th scope="col">Function-driven value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Thesis fails — ghost chain, migration, or stall</td><td>Stall</td><td>45%</td><td>&lt;$0.01</td></tr>
+            <tr><td>Partial success — real volume, weak accrual</td><td>Foothold</td><td>40%</td><td>≈$0.05</td></tr>
+            <tr><td>Thesis succeeds — venue won, collateral norm exists</td><td>Central</td><td>13%</td><td>≈$0.40</td></tr>
+            <tr><td>Everything breaks favorably</td><td>Ceiling</td><td>2%</td><td>≈$6.25</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>The expected function-driven value of that distribution is roughly $0.20 per XDC — the sum of each outcome times its probability, dominated almost entirely by the two right-tail rows. That number deserves immediate deflation before anyone enjoys it: it is undiscounted 2030 value, it inherits every uncertainty in Part IV's parameters, its tails are exactly where subjective probabilities are least trustworthy, and shifting a few points of probability from Central to Fail moves it violently. The honest statements the table supports are narrower. The modal outcome — the single most likely row — is failure. The distribution is nonetheless asymmetric enough that the expected value exceeds prices XDC has recently traded at. Both statements are true simultaneously; a reader who cannot hold both at once should not act on either.</p>
+
+        <h2>Kelly discipline</h2>
+
+        <p>The Kelly criterion converts a probability distribution into a maximum rational position size, and its output here is the framework's final concession. Compress the table into a binary bet: with probability p ≈ 0.15 the thesis broadly succeeds and the position returns several times its cost (take b = 5× net); otherwise it loses most of its value (take L = 75%). The generalized Kelly fraction is f* = p/L − q/b = 0.15/0.75 − 0.85/5 ≈ <strong>3 percent of risk capital</strong> — and half-Kelly, which most practitioners prefer given how badly subjective tails estimate, is closer to 1.5 percent. The asymmetry justifies a position. The probabilities forbid a conviction position. Anyone sized at ten times Kelly is not expressing greater insight; they are expressing indifference to the number the analysis actually produced. This is arithmetic applied to stated assumptions, not advice; readers who reject the assumptions should reject the output.</p>
+
+        <h2>What would change the numbers — in both directions</h2>
+
+        <p>Downward, the site-level falsification conditions below stand as published. Upward — because a framework that can only update toward failure is as dishonest as one that cannot update at all: measured ε rising through 0.5 percent on real TVL would move probability from Foothold to Central faster than any announcement; a major carrier or bank group committing production eBL volume specifically to XDC would do the same for S; a protocol-level change tying validator economics to secured value would convert the collateral floor into a curve; and treasury transparency — published distribution schedules for the non-circulating 17 billion — would shrink the overhang discount. Each of these is observable. None has occurred as of this writing.</p>
+
+        <h2>Close: what this framework is</h2>
+
+        <p>The XDC thesis, stated at maximum honesty, is this. A once-in-four-centuries legal transition is real, datable, and compounding — that is Part I, and it survives every attack in this series. Whether that transition creates demand for this token depends on two parameters the legal story does not touch: venue share and accrual elasticity — that is Parts II and IV. The institutions that tried to capture this opportunity before, with more money and more access than any public chain has, failed three times in two years, mostly for reasons that are now partially but not fully cured — that is Part III. Priced soberly, the distribution has a fat left mode and a right tail asymmetric enough to justify a small, disciplined, falsifiable position — that is this part.</p>
+
+        <blockquote>The framework's promise is not that the thesis is right. It is that the thesis is now impossible to hold vaguely. Every load-bearing claim has a number, every number has a source, and every source has a condition under which this site will publicly declare it wrong. The Living Framework takes it from here.</blockquote>
+
+        <div class="falsification">
+          <span class="stamp stamp-seal">Site-level falsification conditions</span>
+          <ol>
+            <li>MLETR-aligned adoption stalls below 20 jurisdictions by end-2028 or 30 by end-2030 (UNCITRAL status page). The legal spine of Part I breaks.</li>
+            <li>On-chain trade finance TVL grows ≥3× over any two-year window while native staking and fee demand stay flat within ±10% — confirmed accrual decoupling, per the Part II/IV measurement definitions.</li>
+            <li>TradeTrust production deployments migrate predominantly to a competing chain, or XDC's share of TradeTrust-linked volume holds below 10% for four consecutive quarters.</li>
+            <li>TFDi or equivalent institutional channels settle exclusively in stablecoins with no measurable native-token demand response — protocol collateral below $50M TVL — through end-2028.</li>
+          </ol>
+          <p class="falsification-note">If these conditions are met, the framework does not get reinterpreted. It gets retired — in public, on this site.</p>
+        </div>
 
         <section class="sources" aria-label="Primary sources">
           <h2>Primary sources</h2>
           <ul>
-            <li>UNCITRAL — MLETR status page</li>
-            <li>XDCScan — on-chain demand and supply metrics</li>
-            <li>IMDA (Singapore) — TradeTrust deployment records</li>
-            <li>Primary sources established in Parts I–IV</li>
+            <li><a href="https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records/status" rel="noopener">UNCITRAL — MLETR status page (condition 1 measurement)</a></li>
+            <li><a href="https://xdcscan.com/" rel="noopener">XDCScan — staking, fees, supply, protocol balances (conditions 2 and 4)</a></li>
+            <li><a href="https://www.tradetrust.io/" rel="noopener">IMDA — TradeTrust deployments (condition 3)</a></li>
+            <li><a href="https://www.tradefinancedistribution.com/" rel="noopener">Trade Finance Distribution Initiative (condition 4)</a></li>
+            <li><a href="https://www.circle.com/blog/usdc-cctp-v2-are-coming-soon-to-xdc-network-what-you-need-to-know" rel="noopener">Circle — native USDC on XDC (failure mode three baseline)</a></li>
+            <li><a href="https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf" rel="noopener">Kelly (1956) — A New Interpretation of Information Rate</a></li>
+            <li>Parts I–IV of this series — all quantitative inputs and their sources</li>
           </ul>
         </section>
       </div>

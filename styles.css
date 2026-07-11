@@ -678,13 +678,21 @@ li { margin-bottom: 0.4em; }
   margin-top: 10px;
 }
 
+.table-scroll {
+  overflow-x: auto;
+  margin: 28px 0;
+}
+
 .article-body table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   font-family: var(--font-mono);
   font-size: var(--fs-14);
   margin: 28px 0;
 }
+
+.table-scroll table { margin: 0; }
 
 .article-body th, .article-body td {
   text-align: left;

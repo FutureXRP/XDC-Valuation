@@ -14,9 +14,10 @@
   <meta property="og:description" content="The three native-token demand channels — gas, masternode collateral, protocol collateral — tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
   <meta property="og:url" content="https://xdcvaluation.info/part2/">
   <meta property="og:image" content="https://xdcvaluation.info/assets/og-image.png">
+  <meta property="article:published_time" content="2026-07-11">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Part II — The value accrual problem.">
-  <meta name="twitter:description" content="The three native-token demand channels — gas, masternode collateral, protocol collateral — tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
+  <meta name="twitter:description" content="The three native-token demand channels tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
   <meta name="twitter:image" content="https://xdcvaluation.info/assets/og-image.png">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -47,9 +48,8 @@
       <header class="article-header">
         <div class="stamp-row">
           <span class="stamp stamp-manila">Part II</span>
-          <span class="stamp stamp-seal">Forthcoming</span>
         </div>
-        <p class="kicker">The Honest Core</p>
+        <p class="kicker">The Honest Core · Published 11 July 2026</p>
         <h1>The value <em>accrual</em> problem.</h1>
         <p class="dek">Does document tokenization create demand for the token? The framework's hardest question, placed early on purpose.</p>
         <div class="panel panel-conditional">
@@ -59,25 +59,77 @@
       </header>
 
       <div class="article-body">
-        <p class="forthcoming-note">This part has not yet been published. The series contents are visible from day one by design; each part is written in dedicated sessions and published here when it meets the framework's sourcing standard.</p>
+        <p>Part I ended with a question this series refuses to defer: if trade documents move onto XDC Network at scale, what would require anyone to hold XDC? Most crypto valuation writing treats the answer as self-evident — activity on a chain must be good for the chain's token. It is not self-evident. It is frequently false. Chains exist whose usage grew while their tokens' non-speculative demand did not, because nothing in the architecture converted usage into holding. This part takes the question apart channel by channel, using the network's own published parameters, and states plainly which channels can scale and which cannot.</p>
 
-        <h2>What this part will cover</h2>
-        <ul>
-          <li>The three demand channels for the native token: gas, masternode staking collateral, and emergent protocol collateral — each verified against primary network documentation.</li>
-          <li>The USDC settlement problem: settlement value flowing through Circle's rails rather than the native token.</li>
-          <li>The inverted-RLUSD structure: where the XRP framework argued a stablecoin cannot substitute for a bridge asset at the seam, here we must test whether the stablecoin does substitute for the native token in the settlement role.</li>
-          <li>TradeTrust chain-agnosticism as a standing threat.</li>
-          <li>Supply overhang: circulating versus total supply, verified on-chain.</li>
-          <li>The elasticity question, derived formally. Part IV quantifies it.</li>
-        </ul>
+        <p>One definition first, because the whole series turns on it. <strong>Accrual elasticity</strong> is the relationship between value on the network and demand for the native token: if the dollar value of trade finance activity on XDC rises by some amount, by how much does the dollar value of XDC that must be held — for gas, for collateral, for protocol requirements — rise with it? Call it ε. If ε is meaningfully positive, the trade finance thesis and the token thesis are the same thesis. If ε is near zero, they are two different theses, and only one of them pays token holders.</p>
+
+        <h2>Channel one: gas</h2>
+
+        <p>Every transaction on XDC consumes a fee denominated in XDC. This is the most direct demand channel and the easiest to size — and sizing it honestly is deflating. XDC produces a block roughly every two seconds, and its fees are engineered to be tiny: fractions of a cent per transaction, a design choice that is precisely the network's pitch to enterprises. Per the network's tokenomics documentation, 20 percent of smart-contract transaction fees are burned, which gives fees a second-order deflationary role.</p>
+
+        <p>Run the generous version of the arithmetic. Suppose $1 trillion of annual trade flows fully documented on-chain — a volume that would represent staggering, thesis-vindicating success. At an average shipment value of $50,000, that is 20 million shipments a year. Give each shipment an aggressive fifty on-chain transactions across its document lifecycle — issuance, endorsements, verifications, surrender, financing events. That is one billion transactions. At fees of a tenth of a cent, total annual fee demand is <em>one million dollars</em>. At a full cent — ten to a hundred times current fee levels — it is ten million. Against a token market capitalization measured in billions, gas demand is a rounding error, and the 20 percent burn is a rounding error on a rounding error.</p>
+
+        <blockquote>Gas cannot carry this thesis. Any analysis of XDC that leans on transaction fees as the demand driver is quietly assuming fees rise a thousandfold — which would destroy the enterprise value proposition it is simultaneously celebrating.</blockquote>
+
+        <h2>Channel two: masternode collateral</h2>
+
+        <p>XDC runs delegated proof of stake with 108 validator masternodes, each of which must post 10 million XDC as collateral, pass KYC, and accept a 30-day withdrawal delay on resignation. Standby masternodes post the same collateral to queue for validator slots, and the XDPoS 2.0 architecture adds protector nodes around the validator set. This is real, contractual, verifiable demand: 108 × 10M = 1.08 billion XDC locked in the validator set alone — roughly five percent of the ~21 billion circulating supply — with standby collateral on top of it, checkable on-chain at any time.</p>
+
+        <p>It is also, structurally, the wrong shape for the thesis. Masternode collateral is a <em>step function with a ceiling</em>, not a curve that tracks adoption. The validator set is fixed at 108; the collateral parameter is fixed at 10 million. If trade finance volume on XDC grew a hundredfold tomorrow, the protocol would not require one additional XDC of validator collateral. Collateral demand grows only if the network raises the parameters, expands the validator set, or attracts more standby nodes chasing yield — decisions and behaviors that <em>correlate</em> with adoption but are not <em>caused</em> by it in any contractual way. Masternode economics currently pay operators from block emissions of 5.5 XDC per block (roughly 87 million XDC a year, about an 8 percent nominal yield on validator collateral), which means this channel is funded by inflation, not by trade finance revenue.</p>
+
+        <p>State it plainly: the largest verifiable source of XDC token demand today is bounded, parameter-dependent, and inelastic to the very adoption this framework analyzes. That sentence is the honest core of the honest core.</p>
+
+        <h2>Channel three: protocol collateral</h2>
+
+        <p>The third channel is everything that might emerge on top: financing protocols that require margin in XDC, tokenized trade asset markets that use XDC as collateral or bonding, insurance pools, settlement-guarantee structures. This channel is the only one whose demand could genuinely scale with trade finance TVL — if a protocol requires 5 percent margin in XDC against financed volume, then ε is 0.05 for that volume, contractually. It is also, today, the thinnest channel: nothing at scale currently forces trade finance activity on XDC to hold XDC as collateral. The channel that could save the thesis is the one that exists least.</p>
+
+        <p>The pattern across the three channels is uncomfortable and worth stating as a single sentence: <strong>the demand that is verifiable is not scalable, and the demand that is scalable is not yet verifiable.</strong></p>
+
+        <h2>The USDC problem</h2>
+
+        <p>In September 2025, Circle launched native USDC on XDC Network with CCTP V2 — not a wrapped or bridged derivative, but the same regulated, 1:1 redeemable digital dollar issued on Ethereum and Solana, movable across chains by burn-and-mint. For the network, this is a genuine milestone: enterprises will not settle invoices in a volatile asset, and native USDC removes the single largest practical objection to on-chain trade settlement.</p>
+
+        <p>For the token, it is a double-edged sword, and this framework insists on looking at both edges. When settlement runs in USDC, the value flows across XDC's rails but accrues to Circle's balance sheet — Circle earns the float on reserves; XDC earns the gas, which channel one just showed is negligible. A complete trade finance stack can now run end-to-end on XDC — MLETR documents via TradeTrust, settlement via USDC — in which the native token's required role is limited to fees measured in fractions of a cent.</p>
+
+        <p>The sibling framework at xrpvaluation.info confronted a stablecoin question with the opposite polarity, and the contrast is instructive. There, the argument was that RLUSD could not substitute for XRP because a bridge asset at an inter-bloc settlement seam does a job a single-issuer dollar liability cannot do: the bridge function and the stablecoin function are different functions. Here the structure inverts. In XDC's settlement role, the stablecoin is not an imperfect substitute for the native token — it is a <em>better</em> instrument for the job, because the job is paying an invoice in dollars. Whatever role remains for XDC must therefore be found in functions USDC cannot perform: securing the network, collateralizing protocols, and paying for blockspace. That is exactly the three channels above, and two of them just measured small.</p>
+
+        <h2>The portability problem</h2>
+
+        <p>TradeTrust — the framework that makes MLETR-grade documents possible on public chains — supports five chains today: Ethereum, Polygon, XDC, Astron, and Stability. This is not an oversight in XDC's position; it is the design intention of a Singapore government agency whose goal is digitized trade, not any particular chain's success. The document layer is portable by construction. If a major carrier consortium or bank group decides its electronic bills of lading should live on an Ethereum L2 with deeper liquidity and a larger developer base, TradeTrust will work there too. XDC's advantages — years of trade-finance-specific positioning, TFDi membership, purpose-built tooling, enterprise relationships — are real but soft: they are head starts, not moats. A head start is worth something. It is not worth what a lock-in is worth, and the two should never be priced the same way.</p>
+
+        <h2>The overhang</h2>
+
+        <p>Roughly 21 billion XDC circulate against a total supply of about 38 billion. The difference — approaching 45 percent of total supply — sits in ecosystem, founder, and treasury allocations from the 2019 mainnet pre-mine, per the network's published tokenomics. This is not a hidden fact, and its release is not scheduled malice; ecosystem funds exist to be spent on ecosystems. But for valuation purposes it means every demand scenario in Part IV must clear a supply headwind: token demand does not translate to price until it outruns the distribution of the other 17 billion. A thesis that is right about adoption and wrong about absorption can still lose money for a very long time.</p>
+
+        <h2>The elasticity question, stated formally</h2>
+
+        <p>Everything above compresses into one measurable relationship. Let V be the dollar value of trade finance activity on XDC — documents under management, financed volume, protocol TVL. Let D be the dollar value of XDC that must be held to support that activity:</p>
+
+        <blockquote>D = D<sub>collateral</sub> + D<sub>gas</sub> + D<sub>protocol</sub> &nbsp;·&nbsp; ε = ΔD / ΔV</blockquote>
+
+        <p>The analysis in this part fixes the shape of each term. D<sub>collateral</sub> is large but flat — a step function that does not move with V. D<sub>gas</sub> moves with V but is negligible in magnitude. D<sub>protocol</sub> is the entire game: it is the only term that can make ε meaningfully positive at scale, and it currently rounds to zero. The framework's central empirical task — the one the Living Framework exists to perform — is watching whether D<sub>protocol</sub> ignites as V grows. Both quantities are observable: V from RWA TVL trackers and network disclosures, D from staking contracts and protocol balances on XDCScan.</p>
+
+        <p>This framework does not assume ε is positive. It defines how to measure ε, publishes the conditions under which the measurement would kill the thesis, and prices the uncertainty in Part V. Before any of that, though, the strongest version of the bear case deserves its full hearing — because the claim "banks will adopt blockchain trade finance" has been tested three times by the banks themselves, with three corpses to show for it. That is Part III.</p>
+
+        <div class="falsification">
+          <span class="stamp stamp-seal">Falsification conditions — Part II</span>
+          <ol>
+            <li>On-chain trade finance TVL grows threefold or more over any rolling two-year window while the sum of staking collateral and annualized fee demand (in XDC terms) remains flat to within ±10%. That is confirmed accrual decoupling: ε ≈ 0 measured, not feared.</li>
+            <li>Institutional settlement flows on XDC run ≥95% in stablecoins for four consecutive quarters with no compensating growth in D<sub>protocol</sub>. The settlement layer would be captured with no collateral offset.</li>
+            <li>No protocol requiring XDC-denominated collateral against trade finance assets reaches $50M TVL by end-2028. The one scalable channel would have failed to ignite within the thesis window.</li>
+          </ol>
+          <p class="falsification-note">These are the measurements that turn this part's open question into an answer. Each is tracked in the Living Framework.</p>
+        </div>
 
         <section class="sources" aria-label="Primary sources">
           <h2>Primary sources</h2>
           <ul>
-            <li>XDC Network — technical documentation (masternode and staking parameters)</li>
-            <li>XDCScan — on-chain supply and network data</li>
-            <li>Circle — USDC documentation</li>
-            <li>IMDA (Singapore) — TradeTrust documentation</li>
+            <li><a href="https://docs.xdc.network/" rel="noopener">XDC Network — technical documentation (masternode parameters, XDPoS consensus)</a></li>
+            <li><a href="https://xinfin.org/setup-masternode" rel="noopener">XinFin — masternode requirements (10M XDC collateral, KYC, resignation terms)</a></li>
+            <li><a href="https://xdcscan.com/" rel="noopener">XDCScan — on-chain supply, staking, and fee data</a></li>
+            <li><a href="https://xinfin.org/docs/xdc-mica-whitepaper.pdf" rel="noopener">XDC Network — MiCA white paper (tokenomics: emissions, fee burn, allocations)</a></li>
+            <li><a href="https://www.circle.com/blog/usdc-cctp-v2-are-coming-soon-to-xdc-network-what-you-need-to-know" rel="noopener">Circle — native USDC and CCTP V2 on XDC Network (2025)</a></li>
+            <li><a href="https://www.tradetrust.io/" rel="noopener">IMDA (Singapore) — TradeTrust supported networks</a></li>
           </ul>
         </section>
       </div>

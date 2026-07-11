@@ -14,9 +14,10 @@
   <meta property="og:description" content="The TVL-linked accrual model: staking collateral, fee demand, and protocol collateral, composed into scenario tables from market penetration to implied price.">
   <meta property="og:url" content="https://xdcvaluation.info/part4/">
   <meta property="og:image" content="https://xdcvaluation.info/assets/og-image.png">
+  <meta property="article:published_time" content="2026-07-11">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Part IV — Sizing the machine.">
-  <meta name="twitter:description" content="The TVL-linked accrual model: staking collateral, fee demand, and protocol collateral, composed into scenario tables from market penetration to implied price.">
+  <meta name="twitter:description" content="The TVL-linked accrual model, from market penetration to implied price — with the elasticity assumption exposed.">
   <meta name="twitter:image" content="https://xdcvaluation.info/assets/og-image.png">
 
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -47,9 +48,8 @@
       <header class="article-header">
         <div class="stamp-row">
           <span class="stamp stamp-manila">Part IV</span>
-          <span class="stamp stamp-seal">Forthcoming</span>
         </div>
-        <p class="kicker">The Quantitative Contribution</p>
+        <p class="kicker">The Quantitative Contribution · Published 11 July 2026</p>
         <h1>Sizing the <em>machine</em>.</h1>
         <p class="dek">A TVL-linked accrual model: from on-chain trade finance volume to implied token demand, with the elasticity assumption exposed rather than buried.</p>
         <div class="panel panel-conditional">
@@ -59,24 +59,91 @@
       </header>
 
       <div class="article-body">
-        <p class="forthcoming-note">This part has not yet been published. The series contents are visible from day one by design; each part is written in dedicated sessions and published here when it meets the framework's sourcing standard.</p>
+        <p>The sibling framework at xrpvaluation.info sizes XRP with a square-root market impact law, because the XRP thesis is about a bridge asset absorbing peak settlement tickets: the question there is how much liquidity a bridge must carry, and impact math answers it. That tool is deliberately <em>not</em> the primary instrument here, because XDC's claimed role is different. XDC is not proposed as the asset that value moves <em>through</em>; it is proposed as the asset that must be <em>held</em> — as validator collateral, as protocol collateral, as the fuel of a document-settlement machine. Holding demand is a stock, not a flow, so the correct model is a balance-sheet model: for a given dollar value of trade finance living on the network, how many dollars of XDC must sit still to support it?</p>
 
-        <h2>What this part will cover</h2>
-        <ul>
-          <li>Why the square-root market impact law is not the primary tool here: XDC is not a bridge asset absorbing peak tickets.</li>
-          <li>The TVL-linked accrual model: for $X of on-chain trade finance, derive token demand from staking collateral at the implied security budget, fee demand at observed gas dynamics, and any protocol-collateral requirements.</li>
-          <li>The scenario table: penetration of the digitizable trade market × XDC's chain share × accrual elasticity → implied market cap → implied price at projected circulating supply.</li>
-          <li>Where the square-root law does apply: sizing the liquidity XDC's own market needs to absorb institutional staking positions without unacceptable impact.</li>
-          <li>This part's math feeds the Phase 2 Accrual Engine.</li>
-        </ul>
+        <p>Part II established the three demand channels and their shapes. This part assembles them into a machine you can put numbers into. Every assumption is exposed, every scenario is labeled with what would have to be true for it to occur, and the model's most fragile joint — the elasticity parameter — is highlighted rather than hidden, because Part II earned the right to be suspicious of it.</p>
+
+        <h2>The model</h2>
+
+        <blockquote>D = D<sub>collateral</sub> + D<sub>gas</sub> + D<sub>protocol</sub> &nbsp;·&nbsp; D<sub>protocol</sub> = T × P × S × ε</blockquote>
+
+        <p>T is the addressable trade base: goods trade of roughly $25 trillion a year (UNCTAD, 2024). P is penetration — the share of that trade whose documents and financing are tokenized on public chains at all. S is XDC's share of what is tokenized. ε is accrual elasticity — the fraction of on-network value that must be held in XDC as collateral, margin, or bonding. The product is the dollar stock of XDC that trade finance function, rather than speculation, would require the market to hold.</p>
+
+        <p><strong>D<sub>collateral</sub> — measured, bounded.</strong> The validator set posts 108 × 10 million = 1.08 billion XDC, with standby masternodes adding to it. This is verifiable on-chain and it is the floor under everything — but Part II showed it is a step function with a ceiling. In this model it enters as a fixed stock of roughly 1.1–1.5 billion XDC (validators plus standby growth), not as a function of T. If the network were to make validator economics scale with secured value — more slots, higher collateral parameters, restaking-style mechanisms — this term would move into the elasticity column, and the model would brighten considerably. It has not done so, and the model prices what exists.</p>
+
+        <p><strong>D<sub>gas</sub> — measured, negligible.</strong> Part II ran the arithmetic at full generosity: $1 trillion of documented flow yields roughly $1–10 million a year of fee demand at enterprise-viable fee levels. The term is retained in the model for honesty and contributes nothing material in any scenario. A valuation that needs D<sub>gas</sub> to matter is a valuation that needs fees to rise enough to kill the enterprise pitch.</p>
+
+        <p><strong>D<sub>protocol</sub> — unmeasured, decisive.</strong> Everything rides here, on ε. For calibration: traditional trade finance runs on margins and cash collateral in the low single-digit percentages of transaction value; DeFi lending protocols demand overcollateralization of 110–150 percent but only on the borrowed slice. A trade finance protocol requiring XDC-denominated bonding, first-loss capital, or settlement guarantees might plausibly require between half a percent and five percent of financed volume — <em>if</em> such protocols come to exist and <em>if</em> they denominate in XDC rather than USDC. Those are the two ifs this entire series orbits. The scenarios below span that range; readers should treat the high end as requiring the strongest version of both ifs simultaneously.</p>
+
+        <h2>The scenario table</h2>
+
+        <p>Assumptions held fixed across scenarios: T = $25 trillion; circulating supply projected at ~25 billion XDC by 2030 (current ~21 billion, plus block emissions of roughly 87 million a year, plus partial distribution of treasury allocations — the overhang from Part II, taken at a moderate pace). Implied price is the function-driven valuation D divided by projected supply: the price at which holding demand alone clears, before any speculative premium and before the masternode stock, which reduces free float on top of these figures.</p>
+
+        <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Scenario</th>
+              <th scope="col">P — tokenized</th>
+              <th scope="col">S — XDC share</th>
+              <th scope="col">ε — elasticity</th>
+              <th scope="col">D — held demand</th>
+              <th scope="col">Implied price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Stall</td><td>2%</td><td>5%</td><td>0.5%</td><td>$0.13B</td><td>&lt;$0.01</td></tr>
+            <tr><td>Foothold</td><td>5%</td><td>10%</td><td>1%</td><td>$1.25B</td><td>$0.05</td></tr>
+            <tr><td>Central</td><td>10%</td><td>20%</td><td>2%</td><td>$10B</td><td>$0.40</td></tr>
+            <tr><td>Ceiling</td><td>25%</td><td>50%</td><td>5%</td><td>$156B</td><td>$6.25</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>Read the table the way the framework intends, which is not the way a promoter would read it.</p>
+
+        <p><strong>Stall</strong> is what the current architecture produces if tokenization proceeds modestly and XDC remains one venue among several with no collateral sink: function-driven demand supports well under a cent, meaning essentially the entire prevailing price is speculative premium plus collateral-floor effects. This row is Part II's warning rendered in dollars.</p>
+
+        <p><strong>Foothold</strong> is sobering in a different way: real penetration (5 percent of world goods trade tokenized), a real double-digit venue share, and a functioning 1 percent collateral sink together support roughly a nickel — the neighborhood where XDC has actually traded. The uncomfortable implication runs both directions: today's price already embeds something like Foothold succeeding, and Foothold succeeding from here would vindicate the thesis without necessarily rewarding the holder.</p>
+
+        <p><strong>Central</strong> is the scenario the bull case must actually defend, and it is demanding: a tenth of world goods trade tokenized within the window (plausible under the DCSA 2030 commitments), a fifth of it on XDC (requiring XDC to decisively win the TradeTrust ecosystem against Ethereum and Polygon), and a 2 percent XDC-denominated collateral norm (requiring the protocol layer that does not yet exist). Grant all three and function alone supports roughly $0.40 — a several-fold repricing. Every one of those grants is currently unearned; that is what "conditional analysis" means.</p>
+
+        <p><strong>Ceiling</strong> is included because a framework should show its upper bound and then immediately disown it as a forecast: a quarter of world trade tokenized, half of it on XDC, a 5 percent collateral norm. Each factor individually stretches credulity; their product is not a target, it is the outer wall of the possibility space. Anyone quoting this row as a prediction is misusing this site.</p>
+
+        <blockquote>The spread between Stall and Central is not about trade digitization — both scenarios assume it happens. The entire spread is S and ε: whether XDC wins the venue competition, and whether anything forces the machine to hold its token. Part I's legal curve says nothing about either. That is the discipline of this table.</blockquote>
+
+        <h2>Where the square-root law does apply</h2>
+
+        <p>Impact math is the wrong primary tool here, but it answers one question this thesis cannot dodge: can institutions actually build the positions the model imagines? The empirical square-root law says the price impact of executing a position of size Q against an asset with daily volatility σ and daily traded volume V scales as approximately σ·√(Q/V). Take an institution accumulating a $100 million XDC treasury or masternode position against a market trading $40 million a day with 6 percent daily volatility: impact on the order of 6% × √(100/40) ≈ 9–10 percent — before front-running, and roughly independent of how patiently the execution is spread. A $1 billion program under the same conditions implies impact near 30 percent.</p>
+
+        <p>The point is not the precise figures; it is that at current liquidity, institutional-scale accumulation is itself a price event. The Central scenario requires roughly $10 billion of held demand to arrive; it cannot arrive quietly. This cuts both ways — it is the mechanical reason function-driven demand, if it materializes, would overshoot on the way in, and the same mechanism amplifies any institutional exit. XDC's market currently has the liquidity of its speculation, not the liquidity of its ambitions; closing that gap is a precondition of the Central scenario, not a consequence of it.</p>
+
+        <h2>What updates this model</h2>
+
+        <p>Five observables, all public, drive every revision of this part. First, protocol TVL on XDC that is contractually bound to XDC-denominated collateral — the direct measurement of ε, currently near zero. Second, the USDC-versus-XDC composition of settlement and collateral flows on-chain. Third, staking totals beyond the validator floor, as standby demand responds to adoption. Fourth, TradeTrust production deployment announcements and their chain choices — the measurement of S. Fifth, the distribution pace of the ~17 billion non-circulating XDC, which sets the supply denominator. The Living Framework logs each; the Accrual Engine — this model as an interactive tool, planned as Phase 2 of this site — will let readers set P, S, and ε against live data themselves.</p>
+
+        <p>The machine, sized honestly: bounded floor, negligible fuel, and one decisive unknown that no amount of legal-adoption news can substitute for. What remains is to price the ways it fails — all five of them, at full strength. That is Part V.</p>
+
+        <div class="falsification">
+          <span class="stamp stamp-seal">Falsification conditions — Part IV</span>
+          <ol>
+            <li>Measured ε (XDC-bound collateral ÷ on-network trade finance TVL) remains below 0.25% while TVL grows through $1B. The Central scenario's decisive parameter would be empirically dead, and the model collapses toward Stall.</li>
+            <li>XDC's share of TradeTrust-linked production volume falls below 10% for four consecutive quarters. S would be resolving against the thesis regardless of ε.</li>
+            <li>Circulating supply grows past 28B by 2030 without proportional demand growth — the overhang distributing faster than the moderate pace this model assumes, invalidating its price denominators.</li>
+          </ol>
+          <p class="falsification-note">This model is a measurement instrument, not a promise. When the readings contradict it, the model — not the readings — gets revised.</p>
+        </div>
 
         <section class="sources" aria-label="Primary sources">
           <h2>Primary sources</h2>
           <ul>
-            <li>XDC Network — technical documentation (validator economics, gas dynamics)</li>
-            <li>XDCScan — on-chain fee and staking data</li>
-            <li>Asian Development Bank — trade finance market sizing</li>
-            <li>BIS — research on market liquidity and impact</li>
+            <li><a href="https://unctad.org/news/global-trade-hits-record-33-trillion-2024-driven-services-and-developing-economies" rel="noopener">UNCTAD — global trade $33T (goods ≈ $25T), 2024</a></li>
+            <li><a href="https://docs.xdc.network/" rel="noopener">XDC Network — technical documentation (validator set, collateral parameters)</a></li>
+            <li><a href="https://xinfin.org/docs/xdc-mica-whitepaper.pdf" rel="noopener">XDC Network — MiCA white paper (emissions, tokenomics, allocations)</a></li>
+            <li><a href="https://xdcscan.com/" rel="noopener">XDCScan — on-chain supply, staking, and fee observables</a></li>
+            <li><a href="https://www.circle.com/blog/usdc-cctp-v2-are-coming-soon-to-xdc-network-what-you-need-to-know" rel="noopener">Circle — native USDC on XDC (settlement composition baseline)</a></li>
+            <li><a href="https://arxiv.org/abs/1105.1694" rel="noopener">Tóth, Bouchaud et al. — empirical square-root market impact law</a></li>
+            <li><a href="https://www.tradetrust.io/" rel="noopener">IMDA — TradeTrust deployments and supported chains (measurement of S)</a></li>
           </ul>
         </section>
       </div>
