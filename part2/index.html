@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Part II — The value accrual problem. · XDC Valuation Framework</title>
+  <meta name="description" content="The three native-token demand channels — gas, masternode collateral, protocol collateral — tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
+  <link rel="canonical" href="https://xdcvaluation.info/part2/">
+  <meta name="theme-color" content="#101820">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="XDC Valuation Framework">
+  <meta property="og:title" content="Part II — The value accrual problem.">
+  <meta property="og:description" content="The three native-token demand channels — gas, masternode collateral, protocol collateral — tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
+  <meta property="og:url" content="https://xdcvaluation.info/part2/">
+  <meta property="og:image" content="https://xdcvaluation.info/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Part II — The value accrual problem.">
+  <meta name="twitter:description" content="The three native-token demand channels — gas, masternode collateral, protocol collateral — tested against the USDC settlement problem and TradeTrust's chain-agnosticism.">
+  <meta name="twitter:image" content="https://xdcvaluation.info/assets/og-image.png">
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="600x600">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="wordmark"><a href="/">XDC Valuation <span class="wordmark-sub">Framework</span></a></div>
+      <div class="ticker" id="ticker" aria-label="XDC market data">
+        <span>XDC/USD <span class="ticker-value" data-ticker="price">—</span></span>
+        <span>24H VOL <span class="ticker-value" data-ticker="volume">—</span></span>
+        <span>MKT CAP <span class="ticker-value" data-ticker="mcap">—</span></span>
+      </div>
+      <a class="sibling-link" href="https://xrpvaluation.info" rel="noopener">XRP Series ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article wrap">
+      <header class="article-header">
+        <div class="stamp-row">
+          <span class="stamp stamp-manila">Part II</span>
+          <span class="stamp stamp-seal">Forthcoming</span>
+        </div>
+        <p class="kicker">The Honest Core</p>
+        <h1>The value <em>accrual</em> problem.</h1>
+        <p class="dek">Does document tokenization create demand for the token? The framework's hardest question, placed early on purpose.</p>
+        <div class="panel panel-conditional">
+          <span class="panel-label">Conditional analysis</span>
+          <p>This series argues from stated assumptions. The purpose is not to promise outcomes, but to show what the math and structure would require if adoption conditions are met — and to price the probability that they are met at all.</p>
+        </div>
+      </header>
+
+      <div class="article-body">
+        <p class="forthcoming-note">This part has not yet been published. The series contents are visible from day one by design; each part is written in dedicated sessions and published here when it meets the framework's sourcing standard.</p>
+
+        <h2>What this part will cover</h2>
+        <ul>
+          <li>The three demand channels for the native token: gas, masternode staking collateral, and emergent protocol collateral — each verified against primary network documentation.</li>
+          <li>The USDC settlement problem: settlement value flowing through Circle's rails rather than the native token.</li>
+          <li>The inverted-RLUSD structure: where the XRP framework argued a stablecoin cannot substitute for a bridge asset at the seam, here we must test whether the stablecoin does substitute for the native token in the settlement role.</li>
+          <li>TradeTrust chain-agnosticism as a standing threat.</li>
+          <li>Supply overhang: circulating versus total supply, verified on-chain.</li>
+          <li>The elasticity question, derived formally. Part IV quantifies it.</li>
+        </ul>
+
+        <section class="sources" aria-label="Primary sources">
+          <h2>Primary sources</h2>
+          <ul>
+            <li>XDC Network — technical documentation (masternode and staking parameters)</li>
+            <li>XDCScan — on-chain supply and network data</li>
+            <li>Circle — USDC documentation</li>
+            <li>IMDA (Singapore) — TradeTrust documentation</li>
+          </ul>
+        </section>
+      </div>
+
+      <nav class="prevnext" aria-label="Series navigation">
+        <a href="/part1/" class="prevnext-prev">
+          <span class="prevnext-label">Previous — Part I</span>
+          <span class="prevnext-title">The four-hundred-year-old document.</span>
+        </a>
+        <a href="/part3/" class="prevnext-next">
+          <span class="prevnext-label">Next — Part III</span>
+          <span class="prevnext-title">The consortium graveyard.</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-family">Part of the Valuation Frameworks family — <a href="https://xrpvaluation.info" rel="noopener">XRP</a> · <a href="/">XDC</a></p>
+      <p class="footer-disclaimer">Not financial advice. This series argues from stated assumptions. The purpose is not to promise outcomes, but to show what the math and structure would require if adoption conditions are met — and to price the probability that they are met at all. Nothing on this site is a recommendation to buy, sell, or hold any asset.</p>
+      <p class="footer-credit">FutureXRP · <a href="https://x.com/the5blairs" rel="noopener">@the5blairs</a> · xdcvaluation.info</p>
+    </div>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

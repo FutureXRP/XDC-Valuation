@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "slug": "part1",
+      "section": "series",
+      "number": "Part I",
+      "kicker": "Structural Analysis",
+      "title": "The four-hundred-year-old document.",
+      "titleEmphasis": "document",
+      "summary": "The bill of lading, and why paper still governs a $28 trillion market. MLETR and the UK Electronic Trade Documents Act 2023 give electronic trade documents legal standing for the first time — a once-in-four-centuries transition, chartable jurisdiction by jurisdiction.",
+      "tags": ["MLETR", "Bills of Lading", "Legal Adoption"],
+      "inside": [
+        "Why the bill of lading survived four centuries of technology",
+        "MLETR and the ETDA 2023 as the legal unlock, dated and chartable",
+        "What MLETR-compliant on a public chain concretely means, via TradeTrust"
+      ],
+      "date": "2026-07-15",
+      "url": "/part1/",
+      "status": "coming"
+    },
+    {
+      "slug": "part2",
+      "section": "series",
+      "number": "Part II",
+      "kicker": "The Honest Core",
+      "title": "The value accrual problem.",
+      "titleEmphasis": "accrual",
+      "summary": "Does document tokenization create token demand? The three demand channels — gas, masternode collateral, protocol collateral — against the USDC settlement problem and TradeTrust's chain-agnosticism. The framework's hardest question, placed early on purpose.",
+      "tags": ["Value Accrual", "USDC", "Masternodes"],
+      "inside": [
+        "The three demand channels for the native token, examined one by one",
+        "Settlement through Circle's rails: the inverted-RLUSD structure",
+        "Supply overhang and the formal statement of the elasticity question"
+      ],
+      "date": "2026-08-01",
+      "url": "/part2/",
+      "status": "coming"
+    },
+    {
+      "slug": "part3",
+      "section": "series",
+      "number": "Part III",
+      "kicker": "Concession at Full Strength",
+      "title": "The consortium graveyard.",
+      "titleEmphasis": "graveyard",
+      "summary": "we.trade, Marco Polo, Contour: blockchain trade finance backed by the world's largest banks failed three times in two years. An autopsy of each — and an honest accounting of which failure causes MLETR, public-chain neutrality, and TFDi actually cure, and which they do not.",
+      "tags": ["Bear Case", "Consortia", "Trade Finance History"],
+      "inside": [
+        "Three autopsies: we.trade, Marco Polo Network, Contour",
+        "The failure causes: governance, incentives, liquidity islands, no legal substrate",
+        "The differentiation argument, taken only as far as it honestly goes"
+      ],
+      "date": "2026-08-15",
+      "url": "/part3/",
+      "status": "coming"
+    },
+    {
+      "slug": "part4",
+      "section": "series",
+      "number": "Part IV",
+      "kicker": "The Quantitative Contribution",
+      "title": "Sizing the machine.",
+      "titleEmphasis": "machine",
+      "summary": "A TVL-linked accrual model: for a given volume of on-chain trade finance, derive native-token demand from staking collateral, fee dynamics, and protocol collateral. Scenario tables from market penetration to implied price — with the elasticity assumption exposed, not buried.",
+      "tags": ["Valuation Model", "TVL", "Scenario Analysis"],
+      "inside": [
+        "The TVL-linked accrual model, built channel by channel",
+        "Scenario table: penetration × chain share × elasticity → implied market cap",
+        "Where the square-root law does apply: absorbing institutional positions"
+      ],
+      "date": "2026-09-01",
+      "url": "/part4/",
+      "status": "coming"
+    },
+    {
+      "slug": "part5",
+      "section": "series",
+      "number": "Part V",
+      "kicker": "Series Close",
+      "title": "The case against, taken seriously.",
+      "titleEmphasis": "taken seriously",
+      "summary": "Five failure modes at full strength, from accrual decoupling to a consortium-graveyard repeat. Probability table, expected value, Kelly sizing, and explicit falsification criteria. The bull case is earned only by taking the bear case on its own terms.",
+      "tags": ["Bear Case", "Probability", "Falsification"],
+      "inside": [
+        "Five failure modes, each at full strength",
+        "Probability table, expected value, and Kelly sizing",
+        "The falsification criteria that would retire this framework"
+      ],
+      "date": "2026-09-15",
+      "url": "/part5/",
+      "status": "coming"
+    }
+  ]
+}

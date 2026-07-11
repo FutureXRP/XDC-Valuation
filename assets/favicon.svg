@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#101820"/>
+  <g transform="rotate(-6 32 32)">
+    <rect x="9" y="20" width="46" height="24" rx="3" fill="none" stroke="#D9B96C" stroke-width="2.5"/>
+    <text x="32" y="38.5" text-anchor="middle" font-family="'IBM Plex Mono','Courier New',monospace" font-size="15" font-weight="600" letter-spacing="2" fill="#D9B96C">XDC</text>
+  </g>
+</svg>
