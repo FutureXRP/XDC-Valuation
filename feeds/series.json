@@ -7,7 +7,7 @@
       "kicker": "Structural Analysis",
       "title": "The four-hundred-year-old document.",
       "titleEmphasis": "document",
-      "summary": "The bill of lading, and why paper still governs a $33 trillion market. MLETR and the UK Electronic Trade Documents Act 2023 give electronic trade documents legal standing for the first time — a once-in-four-centuries transition, chartable jurisdiction by jurisdiction.",
+      "summary": "The bill of lading, and why paper still governs a $35 trillion market. MLETR and the UK Electronic Trade Documents Act 2023 give electronic trade documents legal standing for the first time — a once-in-four-centuries transition, chartable jurisdiction by jurisdiction.",
       "tags": [
         "MLETR",
         "Bills of Lading",
@@ -18,7 +18,7 @@
         "MLETR and the ETDA 2023 as the legal unlock, dated and chartable",
         "What MLETR-compliant on a public chain concretely means, via TradeTrust"
       ],
-      "date": "2026-07-11",
+      "date": "2026-10-16",
       "url": "/part1/",
       "status": "published"
     },
@@ -40,7 +40,7 @@
         "Settlement through Circle's rails: the inverted-RLUSD structure",
         "Supply overhang and the formal statement of the elasticity question"
       ],
-      "date": "2026-07-11",
+      "date": "2026-10-16",
       "url": "/part2/",
       "status": "published"
     },
@@ -62,7 +62,7 @@
         "The failure causes: governance, incentives, liquidity islands, no legal substrate",
         "The differentiation argument, taken only as far as it honestly goes"
       ],
-      "date": "2026-07-11",
+      "date": "2026-10-16",
       "url": "/part3/",
       "status": "published"
     },
@@ -84,7 +84,7 @@
         "Scenario table: penetration × chain share × elasticity → implied market cap",
         "Where the square-root law does apply: absorbing institutional positions"
       ],
-      "date": "2026-07-11",
+      "date": "2026-10-16",
       "url": "/part4/",
       "status": "published"
     },
@@ -106,7 +106,7 @@
         "Probability table, expected value, and Kelly sizing",
         "The falsification criteria that would retire this framework"
       ],
-      "date": "2026-07-11",
+      "date": "2026-10-16",
       "url": "/part5/",
       "status": "published"
     }
