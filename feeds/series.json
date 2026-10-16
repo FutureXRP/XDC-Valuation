@@ -73,16 +73,16 @@
       "kicker": "The Quantitative Contribution",
       "title": "Sizing the machine.",
       "titleEmphasis": "machine",
-      "summary": "A TVL-linked accrual model: for a given volume of on-chain trade finance, derive native-token demand from staking collateral, fee dynamics, and protocol collateral. Scenario tables from market penetration to implied price — with the elasticity assumption exposed, not buried.",
+      "summary": "A TVL-linked accrual model: convert annual trade flow to outstanding financed stock, derive native-token demand from collateral norms, and normalize per token. Scenario tables with the flow-to-stock conversion exposed, not buried.",
       "tags": [
         "Valuation Model",
         "TVL",
         "Scenario Analysis"
       ],
       "inside": [
-        "The TVL-linked accrual model, built channel by channel",
-        "Scenario table: penetration × chain share × elasticity → implied market cap",
-        "Where the square-root law does apply: absorbing institutional positions"
+        "The accrual model, with the flow-to-stock conversion made explicit",
+        "Scenario table: penetration × chain share × collateral norm → held demand",
+        "Where the square-root law applies — and where it runs out of validated range"
       ],
       "date": "2026-10-16",
       "url": "/part4/",
